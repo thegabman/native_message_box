@@ -38,6 +38,12 @@ else
 
 ### Linux 
 
+![LinuxInfo](images/linux_info.png)
+
+![LinuxWarning](images/linux_warning.png)
+
+![LinuxError](images/linux_error.png)
+
 ## License
 
 LICENSE File covers all files in this repo.
