@@ -1,0 +1,104 @@
+# =======
+# FOLDERS
+# =======
+/projects
+/binaries
+/build
+/node_modules
+
+
+# ===============
+# FILE EXTENSIONS
+# ===============
+*.obj
+*.idb
+*.tlog
+*.pdb
+*.lastbuildstate
+*.log
+*.suo
+*.blend1
+*.blend2
+*.pro.user
+
+
+# =============
+# VISUAL STUDIO
+# =============
+*.opensdf
+*.sdf
+*.vcxproj.user
+*.sln
+*.opendb
+*.VC.db
+
+
+# =====
+# CLION
+# =====
+/.idea
+
+
+# =====
+# CMAKE
+# =====
+/cmake-build-debug
+/cmake-build-release
+
+
+# =====
+# XCODE
+# =====
+*.xcuserstate
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+
+
+# =======
+# MAC OSX
+# =======
+._*
+
+
+# =============
+# EXTERNAL DISK
+# =============
+.Spotlight-V100
+.Trashes
+
+
+# =============
+# DO NOT IGNORE
+# =============
+!/thirdparty/**/*.dll
+!/thirdparty/**/*.lib
+!/thirdparty/**/*.dylib
+!/thirdparty/**/*.a
+!/thirdparty/**/*.so
+!/premake/*.exe
+.vs/
+UpgradeLog.htm
+*.vspx
+
+
+# ====
+# LOGS
+# ====
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+
+
+# ============
+# RUNTIME DATA
+# ============
+pids
+*.pid
+*.seed
+*.pid.lock
+
