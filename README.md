@@ -4,7 +4,7 @@
 NMB or (N)ative (M)essage (B)ox is a very tiny, cross platform and header only C++ library to handle message dialogs natively.
 
 ## Supported
-- Window (using [Winuser.h](https://docs.microsoft.com/en-us/windows/win32/api/winuser/))
+- Windows (using [Winuser.h](https://docs.microsoft.com/en-us/windows/win32/api/winuser/))
 - MacOS (using [CoreFoundation](https://developer.apple.com/documentation/corefoundation))
 - Linux (using [GTK](https://www.gtk.org/docs/installations/linux/))
 
