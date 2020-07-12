@@ -1,3 +1,5 @@
+![Icon](images/icon.png)
+
 # Native Message Box
 NMB or (N)ative (M)essage (B)ox is a very tiny, cross platform and header only C++ library to natively handle message dialogs.
 
