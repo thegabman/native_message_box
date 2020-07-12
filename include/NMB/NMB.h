@@ -9,6 +9,7 @@
 #elif defined(__APPLE__)
     #include <CoreFoundation/CoreFoundation.h>
 #elif defined(__linux__)
+    #include <gtk/gtk.h>
 #else
     #error "Platform not supported!"
 #endif
@@ -19,8 +20,8 @@ namespace NMB
     
     enum Result
     {
-        OK,
-        CANCEL
+        CANCEL,
+        OK
     };
     
     enum Icon
@@ -90,8 +91,30 @@ namespace NMB
             return NMB::Result::CANCEL;
         
 #elif defined(__linux__)
-    
-        return NativeMessageBox::Result::OK;
+
+        GtkMessageType gtk_message_type;
+
+        switch( icon )
+        {
+            case NMB::Icon::INFO:
+                gtk_message_type = GTK_MESSAGE_INFO;
+                break;
+            case NMB::Icon::WARNING:
+                gtk_message_type = GTK_MESSAGE_WARNING;
+                break;
+            case NMB::Icon::ERROR:
+                gtk_message_type = GTK_MESSAGE_ERROR;
+                break;
+        }
+
+        GtkWidget* p_dialog = gtk_message_dialog_new( nullptr, GTK_DIALOG_DESTROY_WITH_PARENT, gtk_message_type, GTK_BUTTONS_OK_CANCEL, "%s\n\n%s", p_title, p_message );
+        gint result = gtk_dialog_run( GTK_DIALOG(p_dialog) );
+        gtk_widget_destroy( p_dialog );
+
+        if( result == GTK_RESPONSE_OK )
+            return NMB::Result::OK;
+        else
+            return NMB::Result::CANCEL;
         
 #else
         

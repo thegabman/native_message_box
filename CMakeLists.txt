@@ -41,6 +41,13 @@ elseif( UNIX )
 
     message( STATUS "Platform: Linux" )
 
+    FIND_PACKAGE( PkgConfig REQUIRED)
+    PKG_CHECK_MODULES( GTK REQUIRED gtk+-3.0 )
+    INCLUDE_DIRECTORIES(${GTK_INCLUDE_DIRS})
+    LINK_DIRECTORIES(${GTK_LIBRARY_DIRS})
+    ADD_DEFINITIONS(${GTK_CFLAGS_OTHER})
+    link_libraries( ${GTK_LIBRARIES} )
+
 
 # ===========
 # UNSUPPORTED
