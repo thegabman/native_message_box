@@ -6,6 +6,7 @@
 
 
 #if defined(_WIN32)
+    #include <Windows.h>
 #elif defined(__APPLE__)
     #include <CoreFoundation/CoreFoundation.h>
 #elif defined(__linux__)
@@ -26,9 +27,9 @@ namespace NMB
     
     enum Icon
     {
-        INFO,
-        WARNING,
-        ERROR
+        ICON_INFO,
+        ICON_WARNING,
+        ICON_ERROR
     };
     
     
@@ -36,22 +37,22 @@ namespace NMB
     {
 #if defined(_WIN32)
     
-        uint32_t icon_flag;
+        int icon_flag;
     
         switch( icon )
         {
-            case NMB::Icon::INFO:
+            case NMB::Icon::ICON_INFO:
                 icon_flag = MB_ICONINFORMATION;
                 break;
-            case NMB::Icon::WARNING:
+            case NMB::Icon::ICON_WARNING:
                 icon_flag = MB_ICONWARNING;
                 break;
-            case NMB::Icon::ERROR:
+            case NMB::Icon::ICON_ERROR:
                 icon_flag = MB_ICONERROR;
                 break;
         }
         
-        int result = MessageBoxA( nullptr, p_message, p_title, MB_OKCANCEL | MB_SYSTEMMODAL | icon_flag )
+        int result = MessageBoxA( nullptr, p_message, p_title, MB_OKCANCEL | MB_SYSTEMMODAL | icon_flag );
         
         if( result == IDOK )
             return NMB::Result::OK;

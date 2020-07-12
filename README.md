@@ -28,6 +28,12 @@ else
 ## Screenshots
 ### Windows
 
+![WinInfo](images/win_info.png)
+
+![WinWarning](images/win_warning.png)
+
+![WinError](images/win_error.png)
+
 ### MacOS
 
 ![MacInfo](images/mac_info.png)
