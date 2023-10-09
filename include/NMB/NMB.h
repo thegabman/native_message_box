@@ -65,13 +65,13 @@ namespace NMB
     
         switch( icon )
         {
-            case NMB::Icon::INFO:
+            case NMB::Icon::ICON_INFO:
                 cf_alert_icon = kCFUserNotificationNoteAlertLevel;
                 break;
-            case NMB::Icon::WARNING:
+            case NMB::Icon::ICON_WARNING:
                 cf_alert_icon = kCFUserNotificationCautionAlertLevel;
                 break;
-            case NMB::Icon::ERROR:
+            case NMB::Icon::ICON_ERROR:
                 cf_alert_icon = kCFUserNotificationStopAlertLevel;
                 break;
         }
@@ -97,13 +97,13 @@ namespace NMB
 
         switch( icon )
         {
-            case NMB::Icon::INFO:
+            case NMB::Icon::ICON_INFO:
                 gtk_message_type = GTK_MESSAGE_INFO;
                 break;
-            case NMB::Icon::WARNING:
+            case NMB::Icon::ICON_WARNING:
                 gtk_message_type = GTK_MESSAGE_WARNING;
                 break;
-            case NMB::Icon::ERROR:
+            case NMB::Icon::ICON_ERROR:
                 gtk_message_type = GTK_MESSAGE_ERROR;
                 break;
         }
