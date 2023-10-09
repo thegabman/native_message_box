@@ -15,7 +15,7 @@ NMB or (N)ative (M)essage (B)ox is a very tiny, cross platform and header only C
 
 ...
 
-NMB::Result result = NMB::open( "Error", "Error Message", NMB::Icon::ERROR );
+NMB::Result result = NMB::show( "Error", "Error Message", NMB::Icon::ICON_ERROR );
 
 if( result == NMB::Result::OK )
 {
